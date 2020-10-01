@@ -1,7 +1,9 @@
 # coding=utf8
+
 import os
 from time import sleep
 from random import randint
+import pyperclip
 
 wordlist="                                                 OSX07sezrn&B,]u~>QP=q4DGMVZ/6da{p2[3hI8|kRULoFKWm?j<9i\"5TCgb+}x\\w`-'NEAH.lYcJ1:fy"
 numlist="@#$%^*_();"
@@ -91,10 +93,11 @@ def encryptor():
       secret_code=secret_code+space
    else:
       secret_code=secret_code+wordlist[i+k]
- 
+ pyperclip.copy(secret_code+super_bit+secret_num)
  print("\n")
  print("ENCODED MESSAGE:")    
  print(secret_code+super_bit+secret_num)
+ print("\n(Copied to clipboard!)")
  print("\n")
  print("Do you want to encode another message (y/n)")
  choice=input(">>>")
@@ -139,10 +142,11 @@ def decryptor():
     elif code[x]==wordlist[i]:
        og_code=og_code+chr(i-int(number))
        break
-
+ pyperclip.copy(og_code)
  print("\n")
  print("DECODED MESSAGE:")    
  print(og_code)
+ print("\n(Copied to clipboard!)")
  print("\n")
  print("Do you want to decode another message (y/n)")
  choice=input(">>>")

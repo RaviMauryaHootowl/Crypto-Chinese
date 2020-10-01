@@ -1,6 +1,11 @@
 # Crypto-Chinese
 An cybersec approach to encrypt messages in a unique way.
 
+## Requirements
+Install pyperclip using
+
+> pip install pyperclip
+
 ### To run langcrypt-chinese.py run this command:
 
 - python3 langcrypt-chinese.py
